@@ -7,14 +7,17 @@ print("4. Divide")
 operation = input("Enter operation (1, 2, 3, 4): ")
 num2 = float(input("Enter second number: "))
 
-if operation == "1":
-    ans = num1 + num2
-elif operation == "2":
-    ans = num1 - num2
-elif operation == "3":
-    ans = num1 * num2
-else:
-    ans = num1 / num2
+match operation:
+    case "1":
+        ans = num1 + num2
+    case "2":
+        ans = num1 - num2
+    case "3":
+        ans = num1 * num2
+    case "4":
+        ans = num1 / num2
+    case _:
+        print("Please choose a valid operation")
 
 print("Your result is", ans)
 
@@ -27,14 +30,17 @@ while True:
     operation2 = input("Enter next operation (1, 2, 3, 4): ")
     num3 = float(input("Enter next number: "))
 
-    if operation2 == "1":
-        ans += num3
-    elif operation2 == "2":
-        ans -= num3
-    elif operation2 == "3":
-        ans *= num3
-    elif operation2 == "4":
-        ans /= num3
+    match operation2:
+        case "1":
+            ans += num3
+        case "2":
+            ans -= num3
+        case "3":
+            ans *= num3
+        case "4":
+            ans /= num3
+        case _:
+            print("Please choose a valid operation")
     
     print("Your result is", ans)
 
